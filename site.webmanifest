@@ -1,0 +1,10 @@
+{
+  "name": "Carrie Dynamics",
+  "short_name": "Carrie Dynamics",
+  "lang": "ru",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0b1316",
+  "theme_color": "#0b1316",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

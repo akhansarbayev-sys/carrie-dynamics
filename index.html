@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carrie Dynamics — нефтесервис полного цикла в Казахстане</title>
+<meta name="description" content="Carrie Dynamics — казахстанская нефтесервисная компания полного цикла на суше: геофизика, проектирование, бурение, цементирование, ремонт скважин, повышение нефтеотдачи. Лицензия МЭ РК № 25016462.">
+<meta name="keywords" content="нефтесервис, бурение скважин, цементирование, геофизика, КРС, ПРС, повышение нефтеотдачи, Жанаозен, Мангистау, Казахстан">
+<meta name="theme-color" content="#0b1316">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Carrie Dynamics">
+<meta property="og:title" content="Carrie Dynamics — нефтесервис полного цикла">
+<meta property="og:description" content="Геофизика, проектирование, бурение, цементирование, ремонт скважин и повышение нефтеотдачи. Базы в Жанаозене, офис в Алматы.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ТОО «CARRIE DYNAMICS»",
+  "alternateName": "Carrie Dynamics",
+  "description": "Нефтесервисная компания полного цикла на суше: геофизика, проектирование, бурение, цементирование, ремонт скважин, повышение нефтеотдачи.",
+  "foundingDate": "2020",
+  "taxID": "201140012873",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Ауэзова, 114/14",
+    "addressLocality": "Алматы",
+    "postalCode": "050057",
+    "addressCountry": "KZ"
+  },
+  "areaServed": "KZ"
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="assets/js/scene.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 48 48">
+    <path d="M19.5 11 L24 2.5 L28.5 11 M21 8 H27" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 44 A19 19 0 0 1 43 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".45"/>
+    <path d="M11.5 44 A12.5 12.5 0 0 1 36.5 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
+    <path d="M18 44 A6 6 0 0 1 30 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M24 11 V34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="24" cy="38" r="3.2" style="fill:var(--ochre)"/>
+  </symbol>
+</svg>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Carrie Dynamics, на главную">
+      <svg><use href="#mark"/></svg>
+      <span class="word"><b>CARRIE</b><span>DYNAMICS</span></span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#approach">Подход</a>
+      <a href="#services">Услуги</a>
+      <a href="#license">Лицензия</a>
+      <a href="#bases">Базы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn" href="#contacts">Связаться</a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Меню">
+  <a href="#approach">Подход</a>
+  <a href="#services">Услуги</a>
+  <a href="#license">Лицензия</a>
+  <a href="#bases">Базы</a>
+  <a href="#contacts">Контакты</a>
+</nav>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Нефтесервис полного цикла · Казахстан</div>
+        <h1>Видим недра.<br><em>Строим</em> скважины.</h1>
+        <p class="lead">Carrie Dynamics сопровождает месторождение на суше: геофизика и проект разработки, бурение и цементирование, ремонт скважин и повышение нефтеотдачи. Каждая операция опирается на данные разведки.</p>
+        <div class="ctas">
+          <a class="btn" href="#services">Услуги компании</a>
+          <a class="btn ghost" href="#license">Лицензия № 25016462</a>
+        </div>
+        <div class="facts">
+          <div><b>8 подвидов</b>работ по лицензии МЭ РК</div>
+          <div><b>3 базы</b>в Жанаозене, Мангистау</div>
+          <div><b>с 2020</b>года на рынке</div>
+        </div>
+      </div>
+      <aside class="legend" aria-label="Что показано на фоне">
+        <h2>На фоне</h2>
+        <ul>
+          <li><span class="sw strat"></span>Геологический разрез, от Q до PZ</li>
+          <li><span class="sw oil"></span>Нефтенасыщенный песчаник J₂, ВНК на 1375 м</li>
+          <li><span class="sw seis"></span>Сейсмический разрез, полярность − / +</li>
+          <li><span class="sw map"></span>Структурная карта по кровле J₂, изогипсы через 50 м</li>
+        </ul>
+        <p>Синтетическая модель для иллюстрации, не данные реального месторождения.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="band" id="approach">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">Подход</div>
+          <h2>Сначала геология, потом железо</h2>
+        </div>
+        <p>Большинство дорогих ошибок в скважине начинается с ошибки в модели пласта. Поэтому мы начинаем с данных: исследования и геофизика дают модель, по ней пишется проект, по проекту бурят и ремонтируют. Одна команда отвечает за всю цепочку.</p>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar">
+          <span class="k">01 · Данные</span>
+          <h3>Геофизика и промысловые исследования</h3>
+          <p>Изучаем разрез и поведение пласта: геофизические исследования, замеры давлений и дебитов, отбор проб.</p>
+        </div>
+        <div class="pillar">
+          <span class="k">02 · Модель и проект</span>
+          <h3>Проектные документы и анализ разработки</h3>
+          <p>Готовим базовые и технические проектные документы, анализируем разработку месторождения.</p>
+        </div>
+        <div class="pillar">
+          <span class="k">03 · Работы на скважине</span>
+          <h3>От бурения до ликвидации</h3>
+          <p>Бурим, цементируем, осваиваем и ремонтируем скважины, применяем методы повышения нефтеотдачи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">Услуги</div>
+          <h2>Восемь подвидов работ по жизненному циклу месторождения</h2>
+        </div>
+        <p>Все услуги ниже входят в государственную лицензию на работы и услуги в сфере углеводородов. Порядок соответствует этапам: от проекта и разведки до эксплуатации и ликвидации скважины.</p>
+      </div>
+      <div class="stages">
+        <div class="stage reveal">
+          <div class="stage-h"><span class="n">ЭТАП 1</span><h3>Проектирование</h3></div>
+          <div class="svc"><h4>Базовые проектные документы и анализ разработки</h4><p>Проекты пробной эксплуатации, технологические схемы и проекты разработки, анализ разработки месторождений.</p><span class="app">Приложение 001</span></div>
+          <div class="svc"><h4>Технические проектные документы</h4><p>Технические проекты для работ на месторождении, включая строительство скважин.</p><span class="app">Приложение 001</span></div>
+        </div>
+        <div class="stage reveal">
+          <div class="stage-h"><span class="n">ЭТАП 2</span><h3>Разведка и исследования</h3></div>
+          <div class="svc"><h4>Геофизические работы</h4><p>Геофизические исследования при разведке и добыче, интерпретация данных для модели пласта.</p><span class="app">Приложение 002</span></div>
+          <div class="svc"><h4>Промысловые исследования</h4><p>Гидродинамические исследования скважин и пластов, замеры давлений и дебитов, отбор проб.</p><span class="app">Приложение 002</span></div>
+        </div>
+        <div class="stage reveal">
+          <div class="stage-h"><span class="n">ЭТАП 3</span><h3>Строительство скважин</h3></div>
+          <div class="svc"><h4>Бурение скважин на суше</h4><p>Разведочные и эксплуатационные скважины на суше.</p><span class="app">Приложение 001</span></div>
+          <div class="svc"><h4>Цементирование скважин</h4><p>Цементирование обсадных колонн, установка цементных мостов.</p><span class="app">Приложение 002</span></div>
+        </div>
+        <div class="stage reveal">
+          <div class="stage-h"><span class="n">ЭТАП 4</span><h3>Эксплуатация и завершение</h3></div>
+          <div class="svc"><h4>Подземный ремонт и освоение скважин</h4><p>Ремонт, испытание, освоение, опробование, консервация и ликвидация скважин.</p><span class="app">Приложение 003</span></div>
+          <div class="svc"><h4>Повышение нефтеотдачи</h4><p>Методы увеличения нефтеотдачи пластов и производительности скважин.</p><span class="app">Приложение 003</span></div>
+        </div>
+      </div>
+      <p class="note">Состав работ под конкретный проект согласуем с заказчиком.</p>
+    </div>
+  </section>
+
+  <section class="band" id="license">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">Лицензия</div>
+          <h2>Государственная лицензия класса 1</h2>
+        </div>
+        <p>Лицензия выдана Министерством энергетики Республики Казахстан. Каждое приложение закрепляет подвиды работ за производственной базой.</p>
+      </div>
+      <div class="lic reveal">
+        <div class="doc">
+          <div class="eyebrow">Лицензия</div>
+          <div class="num">№ 25016462</div>
+          <dl>
+            <dt>Вид</dt><dd>Работы и услуги в сфере углеводородов</dd>
+            <dt>Лицензиар</dt><dd>Министерство энергетики РК</dd>
+            <dt>Класс</dt><dd>Неотчуждаемая, класс 1</dd>
+            <dt>Впервые</dt><dd>28.12.2020</dd>
+            <dt>Редакция</dt><dd>20.05.2025, г. Астана</dd>
+            <dt>Лицензиат</dt><dd>ТОО «CARRIE DYNAMICS», БИН 201140012873</dd>
+          </dl>
+          <a class="verify" href="https://elicense.kz" target="_blank" rel="noopener">Проверить на elicense.kz →</a>
+        </div>
+        <div class="tbl">
+          <table class="apps">
+            <thead><tr><th>Прил.</th><th>Подвиды работ</th><th>База</th></tr></thead>
+            <tbody>
+              <tr><td>001</td><td><ul><li>Бурение скважин на суше</li><li>Технические проектные документы</li><li>Базовые проектные документы и анализ разработки</li></ul></td><td class="addr">Жанаозен, промзона</td></tr>
+              <tr><td>002</td><td><ul><li>Промысловые исследования</li><li>Цементирование скважин</li><li>Геофизические работы</li></ul></td><td class="addr">Жанаозен, ул. Ер Толеп, стр. 72А</td></tr>
+              <tr><td>003</td><td><ul><li>Подземный ремонт, испытание, освоение, опробование, консервация, ликвидация скважин</li><li>Повышение нефтеотдачи и производительности скважин</li></ul></td><td class="addr">Жанаозен, Промзона № 1, стр. 29</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="bases">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">География</div>
+          <h2>Офис в Алматы, базы рядом с промыслами</h2>
+        </div>
+        <p>Три производственные базы стоят в Жанаозене, в центре нефтедобычи Мангистауской области. Бригады и техника выходят на объект без долгой мобилизации.</p>
+      </div>
+      <div class="sites reveal">
+        <div class="site hq"><span class="t">Головной офис</span><h3>Алматы</h3><p>ул. Ауэзова, 114/14<br>050057</p></div>
+        <div class="site"><span class="t">База · прил. 001</span><h3>Жанаозен</h3><p>Промзона<br>Бурение и проектирование</p></div>
+        <div class="site"><span class="t">База · прил. 002</span><h3>Жанаозен</h3><p>ул. Ер Толеп, стр. 72А<br>Геофизика, исследования, цементирование</p></div>
+        <div class="site"><span class="t">База · прил. 003</span><h3>Жанаозен</h3><p>Промзона № 1, стр. 29<br>ПРС, освоение, повышение нефтеотдачи</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="contacts">
+    <div class="wrap contact">
+      <div class="reveal">
+        <div class="eyebrow">Контакты</div>
+        <h2>Обсудим ваш участок, от сейсмики до скважины</h2>
+      </div>
+      <div class="req reveal">
+        <div><span>Компания</span>ТОО «CARRIE DYNAMICS»</div>
+        <div><span>Адрес</span><span id="addr" style="font:inherit;letter-spacing:0;text-transform:none;color:var(--bone)">050057, Республика Казахстан, г. Алматы, ул. Ауэзова, 114/14</span>
+          <button class="copy" id="copyAddr" type="button">Скопировать адрес</button></div>
+        <div><span>БИН</span>201140012873</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div class="about">
+      <span class="brand"><svg><use href="#mark"/></svg><span class="word"><b>CARRIE</b><span>DYNAMICS</span></span></span>
+      <p>Нефтесервисная компания полного цикла на суше: от геофизики и проекта до бурения, ремонта скважин и повышения нефтеотдачи.</p>
+    </div>
+    <div>
+      <h3>Разделы</h3>
+      <ul><li><a href="#approach">Подход</a></li><li><a href="#services">Услуги</a></li><li><a href="#license">Лицензия</a></li><li><a href="#bases">Базы</a></li></ul>
+    </div>
+    <div>
+      <h3>Услуги</h3>
+      <ul><li><a href="#services">Проектирование</a></li><li><a href="#services">Геофизика</a></li><li><a href="#services">Бурение и цементирование</a></li><li><a href="#services">ПРС и нефтеотдача</a></li></ul>
+    </div>
+    <div>
+      <h3>Реквизиты</h3>
+      <ul><li>ТОО «CARRIE DYNAMICS»</li><li>БИН 201140012873</li><li>Лицензия МЭ РК № 25016462</li><li>г. Алматы, ул. Ауэзова, 114/14</li></ul>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap"><span>© <span id="year">2026</span> ТОО «CARRIE DYNAMICS». Все права защищены.</span></div>
+  </div>
+</footer>
+</body>
+</html>
