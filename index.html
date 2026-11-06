@@ -10,6 +10,8 @@
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:site_name" content="Carrie Dynamics">
 <meta property="og:title" content="Carrie Dynamics — нефтесервис полного цикла">
 <meta property="og:description" content="Геофизика, проектирование, бурение, цементирование, ремонт скважин и повышение нефтеотдачи. Базы в Жанаозене, офис в Алматы.">
@@ -24,6 +26,10 @@
 <meta name="twitter:description" content="Геофизика, проектирование, бурение, цементирование, ремонт скважин и повышение нефтеотдачи.">
 <meta name="twitter:image" content="https://www.carriedynamics.com/og-image.png">
 <link rel="canonical" href="https://www.carriedynamics.com/">
+<link rel="alternate" hreflang="ru" href="https://www.carriedynamics.com/">
+<link rel="alternate" hreflang="en" href="https://www.carriedynamics.com/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.carriedynamics.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://www.carriedynamics.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,6 +89,11 @@
       <a href="#bases">Базы</a>
       <a href="#contacts">Контакты</a>
     </nav>
+    <nav class="lang" aria-label="Язык">
+      <a href="/" hreflang="ru" lang="ru" aria-current="page">RU</a>
+      <a href="/en/" hreflang="en" lang="en">EN</a>
+      <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+    </nav>
     <a class="btn" href="#contacts">Связаться</a>
     <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mnav"><span></span></button>
   </div>
@@ -93,6 +104,7 @@
   <a href="#license">Лицензия</a>
   <a href="#bases">Базы</a>
   <a href="#contacts">Контакты</a>
+  <div class="lang"><a href="/" hreflang="ru" lang="ru" aria-current="page">RU</a><a href="/en/" hreflang="en" lang="en">EN</a><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></div>
 </nav>
 
 <main id="main">
@@ -253,7 +265,7 @@
       <div class="req reveal">
         <div><span>Компания</span>ТОО «CARRIE DYNAMICS»</div>
         <div><span>Адрес</span><span id="addr" style="font:inherit;letter-spacing:0;text-transform:none;color:var(--bone)">050057, Республика Казахстан, г. Алматы, ул. Ауэзова, 114/14</span>
-          <button class="copy" id="copyAddr" type="button">Скопировать адрес</button></div>
+          <button class="copy" id="copyAddr" type="button" data-done="Скопировано">Скопировать адрес</button></div>
         <div><span>БИН</span>201140012873</div>
       </div>
     </div>
