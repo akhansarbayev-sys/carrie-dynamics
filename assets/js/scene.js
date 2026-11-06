@@ -35,7 +35,14 @@
   const inOil = (x, z, d, hang) => d > horizon(7, x, z, hang) && d < horizon(8, x, z, hang) && d < OWC;
 
   try { await Promise.race([document.fonts.load('500 24px "IBM Plex Mono"'), new Promise(r => setTimeout(r, 1500))]); } catch (e) {}
-  const MONO = '"IBM Plex Mono", ui-monospace, Menlo, monospace';
+  const MONO = '"IBM Plex Mono", ui-monospace, Menlo, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", monospace';
+  const LANG = (document.documentElement.lang || 'ru').slice(0, 2);
+  const TXT = ({
+    ru: { owc: 'ВНК 1375 м', m: 'м', ms: 'мс', map: 'Структурная карта по кровле J2 · изогипсы 50 м' },
+    en: { owc: 'OWC 1375 m', m: 'm', ms: 'ms', map: 'Structure map, top J2 · 50 m contours' },
+    zh: { owc: '油水界面 1375 米', m: '米', ms: '毫秒', map: 'J2 顶面构造图 · 等值线间距 50 米' }
+  })[LANG] || null;
+  const tx = k => (TXT || { owc: 'ВНК 1375 м', m: 'м', ms: 'мс', map: 'Структурная карта по кровле J2 · изогипсы 50 м' })[k];
   const mk = (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
   function patterns(g) {
     const out = {};
@@ -93,7 +100,7 @@
     }
     // OWC tag
     g.font = `600 22px ${MONO}`; g.fillStyle = 'rgba(244,236,218,.95)'; g.textBaseline = 'top';
-    g.fillText('ВНК 1375 м', X(-3.75), Y(OWC) + 8);
+    g.fillText(tx('owc'), X(-3.75), Y(OWC) + 8);
     // depth scale
     g.fillStyle = 'rgba(10,13,14,.8)'; g.fillRect(0, 0, 64, 1024);
     g.strokeStyle = 'rgba(231,224,209,.8)'; g.fillStyle = 'rgba(231,224,209,.9)'; g.lineWidth = 2; g.textBaseline = 'middle';
@@ -102,7 +109,7 @@
       g.beginPath(); g.moveTo(64, y); g.lineTo(64 - (major ? 22 : 10), y); g.stroke();
       if (major) { g.font = `500 17px ${MONO}`; g.textAlign = 'right'; g.fillText(String(d * 500), 38, y); g.textAlign = 'left'; }
     }
-    g.font = `500 15px ${MONO}`; g.textAlign = 'center'; g.fillText('м', 30, 20); g.textAlign = 'left';
+    g.font = `500 15px ${MONO}`; g.textAlign = 'center'; g.fillText(tx('m'), 30, 20); g.textAlign = 'left';
     return c;
   }
 
@@ -146,7 +153,7 @@
       g.beginPath(); g.moveTo(N - 64, y); g.lineTo(N - 64 + (major ? 22 : 10), y); g.stroke();
       if (major) { g.save(); g.translate(N - 6, y); g.scale(sq, 1); g.font = `500 17px ${MONO}`; g.textAlign = 'right'; g.fillText(String(d * 400), 0, 0); g.restore(); }
     }
-    g.save(); g.translate(N - 32, 20); g.scale(sq, 1); g.font = `500 15px ${MONO}`; g.textAlign = 'center'; g.fillText('мс', 0, 0); g.restore();
+    g.save(); g.translate(N - 32, 20); g.scale(sq, 1); g.font = `500 15px ${MONO}`; g.textAlign = 'center'; g.fillText(tx('ms'), 0, 0); g.restore();
     return cv;
   }
 
@@ -210,7 +217,7 @@
     g.beginPath(); g.moveTo(X(MAP_FAULT), 0); g.lineTo(X(MAP_FAULT), 1024); g.stroke();
     g.lineWidth = 2.5; for (let z = -2.8; z < 3; z += .35) { g.beginPath(); g.moveTo(X(MAP_FAULT), Z(z)); g.lineTo(X(MAP_FAULT) + 16, Z(z)); g.stroke(); }
     g.save(); g.translate(X(-4.9), Z(-2.75)); g.scale(1, sq); g.font = `500 20px ${MONO}`; g.textAlign = 'left'; g.textBaseline = 'top';
-    g.fillStyle = 'rgba(231,224,209,.75)'; g.fillText('Структурная карта по кровле J2 · изогипсы 50 м', 0, 0); g.restore();
+    g.fillStyle = 'rgba(231,224,209,.75)'; g.fillText(tx('map'), 0, 0); g.restore();
     return c;
   }
 

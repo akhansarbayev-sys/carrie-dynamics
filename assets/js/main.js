@@ -3,7 +3,7 @@
   const btn = document.getElementById('copyAddr');
   if (btn) btn.addEventListener('click', () => {
     const el = document.getElementById('addr'), txt = el.textContent.trim();
-    const done = () => { btn.textContent = 'Скопировано'; setTimeout(() => (btn.textContent = 'Скопировать адрес'), 1800); };
+    const label = btn.textContent, done = () => { btn.textContent = btn.dataset.done || '✓'; setTimeout(() => (btn.textContent = label), 1800); };
     const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
     try { navigator.clipboard.writeText(txt).then(done, fallback); } catch (e) { fallback(); }
   });
