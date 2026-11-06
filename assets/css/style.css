@@ -191,3 +191,24 @@ footer .legal .wrap{padding-block:18px}
 .err .code{font:500 clamp(4rem,14vw,9rem)/1 var(--f-mono);color:var(--ochre);letter-spacing:.04em}
 .err h1{font-size:clamp(1.4rem,3vw,2rem);margin:16px 0 12px}
 .err p{color:var(--muted);margin:0 0 28px}
+
+/* Language switcher */
+.lang{display:flex;align-items:center;gap:2px;font:500 12px/1 var(--f-mono);letter-spacing:.06em}
+.lang a{padding:7px 7px;text-decoration:none;color:var(--muted);border-radius:2px;transition:color .2s}
+.lang a:hover{color:var(--bone)}
+.lang a[aria-current="page"]{color:var(--bone);box-shadow:inset 0 -1px 0 var(--ochre)}
+.top .lang{flex:none}
+@media (max-width:899px){.top .lang{margin-left:auto}.top .btn{margin-left:0}}
+@media (max-width:599px){.top .lang{display:none}.top .btn{margin-left:auto}}
+.mnav .lang{padding:18px 0 4px;gap:8px;font-size:14px}
+.mnav .lang a{padding:8px 10px;border:1px solid var(--rule);border-bottom:1px solid var(--rule);font:500 14px/1 var(--f-mono)}
+
+/* Chinese typography */
+html[lang^="zh"]{
+  --f-disp:"Unbounded","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-body:"IBM Plex Sans","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-mono:"IBM Plex Mono","Noto Sans SC","PingFang SC",ui-monospace,monospace;
+}
+html[lang^="zh"] body{line-height:1.75}
+html[lang^="zh"] h1{letter-spacing:0;line-height:1.18}
+html[lang^="zh"] h2,html[lang^="zh"] h3,html[lang^="zh"] h4{letter-spacing:0}
